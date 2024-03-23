@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-application
+  name: k8s-web-hello-app
   namespace: argocd
 spec:
   project: default
@@ -12,7 +12,7 @@ spec:
     path: ./
   destination: 
     server: https://kubernetes.default.svc
-    namespace: argocd-app
+    namespace: k8s-web-hello-app
 
   syncPolicy:
     syncOptions:
