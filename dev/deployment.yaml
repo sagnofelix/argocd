@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: argocd-app
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: argocd-app
-        image: jeanfelixsagno/k8s-web-hello:2.0.0
+        image: jeanfelixsagno/k8s-web-hello:1.0.0
         ports:
         - containerPort: 8080
